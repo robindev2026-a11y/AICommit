@@ -206,6 +206,8 @@ def main():
             while True:
                 try:
                     line = input()
+                    if line == "" and len(lines) > 0 and lines[-1] == "":
+                        break
                     lines.append(line)
                 except EOFError:
                     break
